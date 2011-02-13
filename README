@@ -1,0 +1,16 @@
+Based on Jon Larimer's Talk at ShmooCon 2011 (in Washington DC):
+    USB Autorun attacks against Linux
+
+He used something similar to this to show ASLR weaknesses about halfway
+through the talk.  I figured it'd be simple enough to whip one together
+
+Basic overview:
+# launch process w/ go
+# get pid
+# /proc/pid/mmap
+# tells where addr of each libraries
+# look for libc
+# log to output
+
+From there we plot the results to see which addresses are more common than
+others, and those will be targets for following hacks.
