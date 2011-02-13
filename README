@@ -4,8 +4,14 @@ Based on Jon Larimer's Talk at ShmooCon 2011 (in Washington DC):
 He used something similar to this to show ASLR weaknesses about halfway
 through the talk.  I figured it'd be simple enough to whip one together
 
+I'll be first writing a python tester, then transferring it to C.
+Next I'll be doing it in go, but this time massively parallelized (to see how concurrent calls affect it).
+The idea is if we guarantee concurrent calls to the library, will it still move in memory (using a dedicated programmed USB device)
+
+I'll probably also put handy plotting scripts in here for gnuplot cause i like gnuplot
+
 Basic overview:
-# launch process w/ go
+# launch process
 # get pid
 # /proc/pid/mmap
 # tells where addr of each libraries
